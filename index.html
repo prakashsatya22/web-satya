@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Click Image to Play Sound and Show Text</title>
+  <title>Play Sound and Show Text After Sound</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,7 +22,7 @@
     }
 
     #message {
-      display: none; /* Hide text initially */
+      display: none; /* Hide the text initially */
       font-size: 20px;
       margin-top: 20px;
       color: green;
@@ -37,8 +37,8 @@
   <!-- Audio element (hidden) -->
   <audio id="audio" src="/images/click.mp3"></audio>
 
-  <!-- Text message to show after click -->
-  <div id="This is a GitHub Image"></div>
+  <!-- Text message to show after the sound finishes playing -->
+  <div id="message">This is a GitHub Image 🎉</div>
 
   <script>
     // Get the image, audio, and message elements
@@ -46,10 +46,14 @@
     const audio = document.getElementById('audio');
     const message = document.getElementById('message');
 
-    // Add an event listener to play the sound and show the message when the image is clicked
+    // Add an event listener to play the sound and show the message after the sound finishes playing
     image.addEventListener('click', function() {
       audio.play();  // Play the sound
-      message.style.display = 'block';  // Show the message
+
+      // After the audio finishes, display the message
+      audio.onended = function() {
+        message.style.display = 'block';  // Show the message after the sound ends
+      };
     });
   </script>
 
