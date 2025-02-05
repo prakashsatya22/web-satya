@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Sound and Show Text After Sound</title>
+  <title>Play Sound and Show Text Below Image</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,9 +22,9 @@
     }
 
     #message {
-      display: none; /* Hide the text initially */
+      display: none; /* Initially hide the text */
       font-size: 20px;
-      margin-top: 20px;
+      margin-top: 10px;
       color: green;
     }
   </style>
@@ -37,8 +37,8 @@
   <!-- Audio element (hidden) -->
   <audio id="audio" src="/images/click.mp3"></audio>
 
-  <!-- Text message to show after the sound finishes playing -->
-  <div id="message">This is a GitHub Image 🎉</div>
+  <!-- Text message to show below the image -->
+  <div id="message">This is a GitHub image! 🎉</div>
 
   <script>
     // Get the image, audio, and message elements
@@ -46,14 +46,17 @@
     const audio = document.getElementById('audio');
     const message = document.getElementById('message');
 
-    // Add an event listener to play the sound and show the message after the sound finishes playing
+    // Add an event listener to play the sound and show the message below the image
     image.addEventListener('click', function() {
       audio.play();  // Play the sound
 
-      // After the audio finishes, display the message
-      audio.onended = function() {
-        message.style.display = 'block';  // Show the message after the sound ends
-      };
+      // Show the message immediately after the sound starts playing
+      message.style.display = 'block';
+
+      // After 2 seconds, hide the message
+      setTimeout(function() {
+        message.style.display = 'none';  // Hide the message after 2 seconds
+      }, 2000);  // 2000 milliseconds = 2 seconds
     });
   </script>
 
