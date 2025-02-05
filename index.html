@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Click Image to Play Sound</title>
+  <title>Click Image to Play Sound and Show Text</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,26 +18,38 @@
 
     img {
       cursor: pointer; /* Change cursor to pointer on hover */
+      width: 200px;
+    }
+
+    #message {
+      display: none; /* Hide text initially */
+      font-size: 20px;
+      margin-top: 20px;
+      color: green;
     }
   </style>
 </head>
 <body>
 
   <!-- Image to click -->
-  <img src="/images/github3.jpg" alt="Click to Play Sound" width="200" id="clickable-image">
+  <img src="/images/github3.jpg" alt="Click to Play Sound" id="clickable-image">
 
   <!-- Audio element (hidden) -->
-  <audio id="audio" src="/images/click.mp3"></audio>
+  <audio id="audio" src="/images/ckick.mp3"></audio>
+
+  <!-- Text message to show after click -->
+  <div id="This is a GitHub Image">You clicked the image! 🎉</div>
 
   <script>
-    // Get the image and audio elements
+    // Get the image, audio, and message elements
     const image = document.getElementById('clickable-image');
     const audio = document.getElementById('audio');
+    const message = document.getElementById('message');
 
-    // Add an event listener for the image click
+    // Add an event listener to play the sound and show the message when the image is clicked
     image.addEventListener('click', function() {
-      // Play the audio when the image is clicked
-      audio.play();
+      audio.play();  // Play the sound
+      message.style.display = 'block';  // Show the message
     });
   </script>
 
