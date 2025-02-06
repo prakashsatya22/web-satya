@@ -83,6 +83,42 @@
             transition: background-color 1s;
             cursor: pointer;
         }
+        .table-row:hover {
+            background-color: #ffeb3b;
+            transform: scale(1.05);
+        }
+        /* Zoom-out effect when clicked */
+        .table-row.zoom-out {
+            animation: zoomOut 0.6s ease-in-out forwards;
+        }
+
+        @keyframes zoomOut {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .table-row.active {
+            animation: pulse 0.6s ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 <body>
