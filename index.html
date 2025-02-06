@@ -1,182 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound on Click for Multiple Images</title>
-    <style>
-        .image-container {
-            display: inline-block;
-            margin: 10px;
+<h1>Learn Math Tables</h1>
+
+<div class="table-container">
+    <p>Select a number to see its multiplication table:</p>
+    
+    <!-- Number buttons -->
+    <div>
+        <button class="number-button" onclick="showTable(1)">1</button>
+        <button class="number-button" onclick="showTable(2)">2</button>
+        <button class="number-button" onclick="showTable(3)">3</button>
+        <button class="number-button" onclick="showTable(4)">4</button>
+        <button class="number-button" onclick="showTable(5)">5</button>
+        <button class="number-button" onclick="showTable(6)">6</button>
+        <button class="number-button" onclick="showTable(7)">7</button>
+        <button class="number-button" onclick="showTable(8)">8</button>
+        <button class="number-button" onclick="showTable(9)">9</button>
+        <button class="number-button" onclick="showTable(10)">10</button>
+        <button class="number-button" onclick="showTable(11)">11</button>
+        <button class="number-button" onclick="showTable(12)">12</button>
+        <button class="number-button" onclick="showTable(13)">13</button>
+        <button class="number-button" onclick="showTable(14)">14</button>
+        <button class="number-button" onclick="showTable(15)">15</button>
+        <button class="number-button" onclick="showTable(16)">16</button>
+        <button class="number-button" onclick="showTable(17)">17</button>
+        <button class="number-button" onclick="showTable(18)">18</button>
+        <button class="number-button" onclick="showTable(19)">19</button>
+        <button class="number-button" onclick="showTable(20)">20</button>
+    </div>
+
+    <!-- The multiplication table will be displayed here -->
+    <div id="multiplication-table" class="multiplication-table"></div>
+</div>
+
+<script>
+    function showTable(number) {
+        let table = "<h2>Multiplication Table for " + number + "</h2>";
+        for (let i = 1; i <= 10; i++) {
+            table += number + " x " + i + " = " + (number * i) + "<br>";
         }
-        .textMessage {
-            display: none;
-            font-size: 150px;
-            color: green;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 30 Images with their individual text messages -->
-    <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 1" width="100">
-        <div class="textMessage" id="text1">1</div>
-        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-   <div class="image-container">
-        <img class="clickable" src="/images/fish-swimming.gif" alt="Click Me 2" width="100">
-        <div class="textMessage" id="text2">2</div>
-        <audio id="audio2" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 3" width="100">
-        <div class="textMessage" id="text3">3</div>
-        <audio id="audio3" src="/images/click.mp3" preload="auto"></audio>
-     </div>
-    <!-- 30 Images with their individual text messages -->
-    <div class="image-container">
-        <img class="clickable" src="/images/arrow-up.gif" alt="Click Me 4" width="100">
-        <div class="textMessage" id="text4">4</div>
-        <audio id="audio4" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-   <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 5" width="100">
-        <div class="textMessage" id="text5">5</div>
-        <audio id="audio5" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/arrow-down.gif" alt="Click Me 6" width="100">
-        <div class="textMessage" id="text6">6</div>
-        <audio id="audio6" src="/images/click.mp3" preload="auto"></audio>
-     </div>
-    <!-- 30 Images with their individual text messages -->
-    <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 7" width="100">
-        <div class="textMessage" id="text7">7</div>
-        <audio id="audio7" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-   <div class="image-container">
-        <img class="clickable" src="/images/fish-swimming.gif" alt="Click Me 8" width="100">
-        <div class="textMessage" id="text8">8</div>
-        <audio id="audio8" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 9" width="100">
-        <div class="textMessage" id="text9">9</div>
-        <audio id="audio9" src="/images/click.mp3" preload="auto"></audio>
-     </div>
-    <!-- 30 Images with their individual text messages -->
-    <div class="image-container">
-        <img class="clickable" src="/images/arrow-down.gif" alt="Click Me 10" width="100">
-        <div class="textMessage" id="text10">10</div>
-        <audio id="audio10" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-   <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 11" width="100">
-        <div class="textMessage" id="text11">11</div>
-        <audio id="audio11" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/arrow-up.gif" alt="Click Me 12" width="100">
-        <div class="textMessage" id="text12">12</div>
-        <audio id="audio12" src="/images/click.mp3" preload="auto"></audio>
-     </div>
-    <!-- 30 Images with their individual text messages -->
-    <div class="image-container">
-        <img class="clickable" src="/images/fish-swimming.gif" alt="Click Me 13" width="100">
-        <div class="textMessage" id="text13">13</div>
-        <audio id="audio13" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-   <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 14" width="100">
-        <div class="textMessage" id="text14">14</div>
-        <audio id="audio14" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 15" width="100">
-        <div class="textMessage" id="text15">15</div>
-        <audio id="audio15" src="/images/click.mp3" preload="auto"></audio>
-     </div>
-    <!-- 30 Images with their individual text messages -->
-    <div class="image-container">
-        <img class="clickable" src="/images/arrow-up.gif" alt="Click Me 16" width="100">
-        <div class="textMessage" id="text16">16</div>
-        <audio id="audio16" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-   <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 17" width="100">
-        <div class="textMessage" id="text17">17</div>
-        <audio id="audio17" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/fish-swimming.gif" alt="Click Me 18" width="100">
-        <div class="textMessage" id="text18">18</div>
-        <audio id="audio18" src="/images/click.mp3" preload="auto"></audio>
-     </div>
-
-<!-- Repeat the above structure for all 30 images -->
-
-    <!-- For brevity, I'm showing a few, but you can extend it similarly -->
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/github3.jpg" alt="Click Me 19" width="100">
-        <div class="textMessage" id="text19">19</div>
-        <audio id="audio19" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-    
-    <div class="image-container">
-        <img class="clickable" src="/images/fish-swimming.gif" alt="Click Me 20" width="100">
-        <div class="textMessage" id="text20">20</div>
-        <audio id="audio20" src="/images/click.mp3" preload="auto"></audio>
-    </div>
-        
-    <!-- Repeat this pattern for images 5 to 30 -->
-    
-    <script>
-        // For all images, add event listeners
-        const images = document.querySelectorAll('.clickable');
-
-        images.forEach((image, index) => {
-            const textMessage = document.getElementById(`text${index + 1}`);
-            const audio = document.getElementById(`audio${index + 1}`);
-
-            image.addEventListener('click', function() {
-                // Hide clicked image
-                image.style.display = 'none';
-
-                // Show the corresponding text message
-                textMessage.style.display = 'block';
-
-                // Play the corresponding sound
-                audio.play();
-
-                // After audio ends, show the image again and hide text
-                audio.addEventListener('ended', function() {
-                    image.style.display = 'block';
-                    textMessage.style.display = 'none';
-                });
-            });
-        });
-    </script>
+        document.getElementById("multiplication-table").innerHTML = table;
+    }
+</script>
 
 </body>
 </html>
