@@ -29,7 +29,7 @@
 
         .table-container {
             position: relative;
-            background-color: #FFD580;
+            background-color: #F4BB44;
             padding: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             border-radius: 15px;
@@ -44,10 +44,10 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 10px;
+            width: 20px;
             background-color: yellow;
             opacity: 0;
-            animation: flashEffect 0.5s ease-in-out forwards;
+            animation: flashEffect 1s ease-in-out forwards;
         }
 
         .flash-left {
@@ -242,10 +242,10 @@
             rowElement.style.backgroundColor = "";
             rowElement.classList.remove("active", "zoom-out");
 
-            // Reset the flash animation
+        // Reset the flash animation
             document.getElementById("left-flash").style.animation = "";
             document.getElementById("right-flash").style.animation = "";
-        }, 100);
+        }, 1000);
     }
 </script>
 
