@@ -1,64 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Sound and Show Text Below Image</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #f0f0f0;
-    }
-
-    img {
-      cursor: pointer; /* Change cursor to pointer on hover */
-      width: 200px;
-    }
-
-    #message {
-      display: none; /* Initially hide the text */
-      font-size: 20px;
-      margin-top: 10px;
-      color: green;
-    }
-  </style>
+<title> Satyaprakash </title>
 </head>
-<body>
+<body style = "background-image:url('/images/github3.jpg'); background-size: 100%">
+<h2 ALIGN=CENTER>Hello world! this is a test job-4</h2>
+<marquee behavior="scroll" direction="left" loop="-1">
+<img src="/images/fish-swimming.gif" width="94" height="88" alt="Swimming fish" />
+</marquee>
+<marquee behavior="scroll" direction="up">
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+<img src="/images/arrow-up.gif" width="32" height="32" alt="Arrow pointing up" /><br />
+</marquee>
 
-  <!-- Image to click -->
-  <img src="/images/github3.jpg" alt="Click to Play Sound" id="clickable-image">
-
-  <!-- Audio element (hidden) -->
-  <audio id="audio" src="/images/click.mp3"></audio>
-
-  <!-- Text message to show below the image -->
-  <div id="message">This is a GitHub image! 🎉</div>
-
-  <script>
-    // Get the image, audio, and message elements
-    const image = document.getElementById('clickable-image');
-    const audio = document.getElementById('audio');
-    const message = document.getElementById('message');
-
-    // Add an event listener to play the sound and show the message below the image
-    image.addEventListener('click', function() {
-      audio.play();  // Play the sound
-
-      // Show the message immediately after the sound starts playing
-      message.style.display = 'block';
-
-      // After 2 seconds, hide the message
-      setTimeout(function() {
-        message.style.display = 'none';  // Hide the message after 2 seconds
-      }, 2000);  // 2000 milliseconds = 2 seconds
-    });
-  </script>
-
+<marquee behavior="scroll" direction="down">
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+<img src="/images/arrow-down.gif" width="32" height="32" alt="Arrow pointing down" /><br />
+</marquee>
+  
 </body>
 </html>
