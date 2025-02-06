@@ -204,45 +204,45 @@
         let table = "<h2>Multiplication Table for " + number + "</h2>";
         let tableRows = "";
         
-        // Loop through numbers 1 to 10 and create table rows
-        for (let i = 1; i <= 10; i++) {
-            let result = number * i;
+    // Loop through numbers 1 to 10 and create table rows
+    for (let i = 1; i <= 10; i++) {
+        let result = number * i;
             tableRows += `<div class="table-row" id="row${number}-${i}" onclick="playAndChangeColor(${number}, ${i})">` + 
                           number + " x " + i + " = " + result + "</div>";
         }
         
-       // Display the table rows in the multiplication-table div
-        document.getElementById("multiplication-table").innerHTML = table + tableRows;
+    // Display the table rows in the multiplication-table div
+     document.getElementById("multiplication-table").innerHTML = table + tableRows;
     }
 
     // Function to change the row color, play sound, and animate the row when clicked
     function playAndChangeColor(number, row) {
-        // Play the specific sound for this row in the selected table
-        playSound("sound" + number + "-" + row);
+    // Play the specific sound for this row in the selected table
+    playSound("sound" + number + "-" + row);
 
         let rowElement = document.getElementById("row" + number + "-" + row);
 
-        // Add a new background color
-        let colors = ["#ffeb3b", "#ff5722", "#4caf50", "#ff9800", "#8bc34a"];
+    // Add a new background color
+    let colors = ["#ffeb3b", "#ff5722", "#4caf50", "#ff9800", "#8bc34a"];
         let randomColor = colors[Math.floor(Math.random() * colors.length)];
         rowElement.style.backgroundColor = randomColor;
 
-        // Add the zoom-out effect
-        rowElement.classList.add("zoom-out");
+    // Add the zoom-out effect
+    rowElement.classList.add("zoom-out");
 
-        // Add animation class for the row
+    // Add animation class for the row
         rowElement.classList.add("active");
 
-        // Flash animation on both sides of the table
+    // Flash animation on both sides of the table
         document.getElementById("left-flash").style.animation = "flashEffect 0.5s ease-in-out forwards";
         document.getElementById("right-flash").style.animation = "flashEffect 0.5s ease-in-out forwards";
 
-        // Reset color and animation after 1 second
-        setTimeout(() => {
+    // Reset color and animation after 1 second
+    setTimeout(() => {
             rowElement.style.backgroundColor = "";
             rowElement.classList.remove("active", "zoom-out");
 
-        // Reset the flash animation
+    // Reset the flash animation
             document.getElementById("left-flash").style.animation = "";
             document.getElementById("right-flash").style.animation = "";
         }, 1000);
