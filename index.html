@@ -3,94 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound on Click</title>
+    <title>Sound on Click for Multiple Images</title>
     <style>
-        #textMessage {
+        .image-container {
+            display: inline-block;
+            margin: 10px;
+        }
+        .textMessage {
             display: none;
             font-size: 24px;
             color: green;
-            align-items: center;
-        }
-        #image {
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- Image to be clicked -->
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
-    <img id="image" src="/images/github3.jpg" alt="Click Me" width="300">
+    <!-- 30 Images with their individual text messages -->
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 1" width="100">
+        <div class="textMessage" id="text1">1</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+   <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 2" width="100">
+        <div class="textMessage" id="text1">2</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
     
-    <!-- Hidden text that will be displayed during sound play -->
-    <div id="textMessage">1</div>
-    <div id="textMessage">2</div>
-    <div id="textMessage">3</div>
-    <div id="textMessage">4</div>
-    <div id="textMessage">5</div>
-    <div id="textMessage">6</div>
-    <div id="textMessage">7</div>
-    <div id="textMessage">8</div>
-    <div id="textMessage">9</div>
-    <div id="textMessage">10</div>
-    <div id="textMessage">11</div>
-    <div id="textMessage">12</div>
-    <div id="textMessage">13</div>
-    <div id="textMessage">14</div>
-    <div id="textMessage">15</div>
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 3" width="100">
+        <div class="textMessage" id="text1">3</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+     </div>
+    <!-- 30 Images with their individual text messages -->
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 4" width="100">
+        <div class="textMessage" id="text1">4</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
 
-    <!-- Audio file -->
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
-    <audio id="audio" src="/images/click.mp3" preload="auto"></audio>
+   <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 5" width="100">
+        <div class="textMessage" id="text1">5</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
 
+    
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 6" width="100">
+        <div class="textMessage" id="text1">6</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+     </div>
+    <!-- 30 Images with their individual text messages -->
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 7" width="100">
+        <div class="textMessage" id="text1">7</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+   <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 8" width="100">
+        <div class="textMessage" id="text1">8</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+    
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 9" width="100">
+        <div class="textMessage" id="text1">9</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+     </div>
+    <!-- 30 Images with their individual text messages -->
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 10" width="100">
+        <div class="textMessage" id="text1">10</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+   <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 11" width="100">
+        <div class="textMessage" id="text1">11</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+    
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 12" width="100">
+        <div class="textMessage" id="text1">12</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+     </div>
+    <!-- 30 Images with their individual text messages -->
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 13" width="100">
+        <div class="textMessage" id="text1">13</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+   <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 14" width="100">
+        <div class="textMessage" id="text1">14</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+    
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 15" width="100">
+        <div class="textMessage" id="text1">15</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+     </div>
+    <!-- 30 Images with their individual text messages -->
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 16" width="100">
+        <div class="textMessage" id="text1">16</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+   <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 17" width="100">
+        <div class="textMessage" id="text1">17</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+
+    
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 18" width="100">
+        <div class="textMessage" id="text1">18</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+     </div>
+
+<!-- Repeat the above structure for all 30 images -->
+
+    <!-- For brevity, I'm showing a few, but you can extend it similarly -->
+    
+    <div class="image-container">
+        <img class="clickable" src="/images/github3.jpg" alt="Click Me 19" width="100">
+        <div class="textMessage" id="text1">19</div>
+        <audio id="audio1" src="/images/click.mp3" preload="auto"></audio>
+    </div>
+    <!-- Repeat this pattern for images 5 to 30 -->
+    
     <script>
-        // Get elements
-        const image = document.getElementById('image');
-        const audio = document.getElementById('audio');
-        const textMessage = document.getElementById('textMessage');
-        
-        // Add click event listener to the image
-        image.addEventListener('click', function() {
-            // Hide the image
-            image.style.display = 'none';
+        // For all images, add event listeners
+        const images = document.querySelectorAll('.clickable');
 
-            // Show the text message
-            textMessage.style.display = 'block';
+        images.forEach((image, index) => {
+            const textMessage = document.getElementById(`text${index + 1}`);
+            const audio = document.getElementById(`audio${index + 1}`);
 
-            // Play the sound
-            audio.play();
-        });
+            image.addEventListener('click', function() {
+                // Hide clicked image
+                image.style.display = 'none';
 
-        // After the audio ends, show the image again and hide the text
-        audio.addEventListener('ended', function() {
-            image.style.display = 'block';
-            textMessage.style.display = 'none';
+                // Show the corresponding text message
+                textMessage.style.display = 'block';
+
+                // Play the corresponding sound
+                audio.play();
+
+                // After audio ends, show the image again and hide text
+                audio.addEventListener('ended', function() {
+                    image.style.display = 'block';
+                    textMessage.style.display = 'none';
+                });
+            });
         });
     </script>
 
