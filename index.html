@@ -211,26 +211,40 @@
                           number + " x " + i + " = " + result + "</div>";
         }
         
-        // Display the table rows in the multiplication-table div
+       // Display the table rows in the multiplication-table div
         document.getElementById("multiplication-table").innerHTML = table + tableRows;
     }
 
-    // Function to change the row color and play sound when clicked
+    // Function to change the row color, play sound, and animate the row when clicked
     function playAndChangeColor(number, row) {
         // Play the specific sound for this row in the selected table
         playSound("sound" + number + "-" + row);
 
         let rowElement = document.getElementById("row" + number + "-" + row);
-        
-        // Change the row's background color
-        let colors = ["#ffeb3b", "#ff5722", "#2196f3", "#8bc34a", "#ff9800"];
+
+        // Add a new background color
+        let colors = ["#ffeb3b", "#ff5722", "#4caf50", "#ff9800", "#8bc34a"];
         let randomColor = colors[Math.floor(Math.random() * colors.length)];
-        
         rowElement.style.backgroundColor = randomColor;
 
-        // Reset color after a short delay
+        // Add the zoom-out effect
+        rowElement.classList.add("zoom-out");
+
+        // Add animation class for the row
+        rowElement.classList.add("active");
+
+        // Flash animation on both sides of the table
+        document.getElementById("left-flash").style.animation = "flashEffect 0.5s ease-in-out forwards";
+        document.getElementById("right-flash").style.animation = "flashEffect 0.5s ease-in-out forwards";
+
+        // Reset color and animation after 1 second
         setTimeout(() => {
             rowElement.style.backgroundColor = "";
+            rowElement.classList.remove("active", "zoom-out");
+
+            // Reset the flash animation
+            document.getElementById("left-flash").style.animation = "";
+            document.getElementById("right-flash").style.animation = "";
         }, 1000);
     }
 </script>
