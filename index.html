@@ -39,25 +39,6 @@
             text-align: center;
         }
 
-        /* Flash effect styles for both sides */
-        .flash {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 20px;
-            background-color: yellow;
-            opacity: 0;
-            animation: flashEffect 1s ease-in-out forwards;
-        }
-
-        .flash-left {
-            left: 0;
-        }
-
-        .flash-right {
-            right: 0;
-        }
-
         @keyframes flashEffect {
             0% {
                 opacity: 1;
@@ -155,13 +136,14 @@
 
         .image-left {
             left: -120px;
-            background-image: url('/images/github3.jpg'); /* Replace with your left image */
+            background-image: url('/images/github3.jpg''); /* Replace with your left image */
         }
 
         .image-right {
             right: -120px;
             background-image: url('/images/github3.jpg'); /* Replace with your right image */
         }
+
     </style>
 </head>
 <body>
