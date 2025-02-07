@@ -141,6 +141,27 @@
                 transform: scale(1);
             }
         }
+         /* Styling for the images on the left and right */
+        .image-side {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+        }
+
+        .image-left {
+            left: -120px;
+            background-image: url('/images/fish-swimming.gif=Left'); /* Replace with your left image */
+        }
+
+        .image-right {
+            right: -120px;
+            background-image: url('/images/fish-swimming.gif=Right'); /* Replace with your right image */
+        }
     </style>
 </head>
 <body>
