@@ -139,7 +139,30 @@
         .image-right {
             right: -250px;
         }
+        /* Staggering multiple images */
+        .image-left:nth-child(1) {
+            top: 10%;
+        }
 
+        .image-left:nth-child(2) {
+            top: 40%;
+        }
+
+        .image-left:nth-child(3) {
+            bottom: 10%;
+        }
+
+        .image-right:nth-child(1) {
+            top: 10%;
+        }
+
+        .image-right:nth-child(2) {
+            top: 40%;
+        }
+
+        .image-right:nth-child(3) {
+            bottom: 10%;
+        }
     </style>
 </head>
 <body>
@@ -149,7 +172,7 @@
     <!-- Image on the left side -->
     <img src="/images/fish-l.gif" alt="Left Image" class="image-side image-left">
     <img src="/images/fish-l.gif" alt="Left Image" class="image-side image-left">
-
+    <img src="/images/fish-l.gif" alt="Left Image" class="image-side image-left">
 <div class="table-container">
     <p>Select a number to see its multiplication table:</p>
     
@@ -171,6 +194,7 @@
     <div id="multiplication-table" class="multiplication-table"></div>
 </div>
 <!-- Image on the right side -->
+    <img src="/images/fish-r.gif" alt="Right Image" class="image-side image-right">
     <img src="/images/fish-r.gif" alt="Right Image" class="image-side image-right">
     <img src="/images/fish-r.gif" alt="Right Image" class="image-side image-right">
 <!-- Sound files for each line in the table -->
