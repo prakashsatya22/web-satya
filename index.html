@@ -129,19 +129,15 @@
             transform: translateY(-50%);
             width: 100px;
             height: 100px;
-            background-size: cover;
-            background-position: center;
             border-radius: 50%;
         }
 
         .image-left {
-            left: 100px;
-            background-image: url("/images/github3.jpg"); /* Replace with your left image */
+            left: -120px;
         }
 
         .image-right {
-            right: 100px;
-            background-image: url("/images/github3.jpg"); /* Replace with your right image */
+            right: -120px;
         }
 
     </style>
@@ -149,6 +145,9 @@
 <body>
 
 <h1>Learn Math Tables with Unique Sound and Color</h1>
+<div class="table-container">
+    <!-- Image on the left side -->
+    <img src="/images/github3.jpg" alt="Left Image" class="image-side image-left">
 
 <div class="table-container">
     <p>Select a number to see its multiplication table:</p>
@@ -170,7 +169,8 @@
     <!-- The multiplication table will be displayed here -->
     <div id="multiplication-table" class="multiplication-table"></div>
 </div>
-
+<!-- Image on the right side -->
+    <img src="/images/github3.jpg" alt="Right Image" class="image-side image-right">
 <!-- Sound files for each line in the table -->
 <audio id="sound1-1" src="/images/sound1-1.mp3"></audio>
 <audio id="sound1-2" src="/images/sound1-2.mp3"></audio>
